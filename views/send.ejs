@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+    crossorigin="anonymous"
+  />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download | InShare - File Sharing Made Easy</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+      #alert{
+        display:none;
+      }
+    </style>
+</head>
+
+<body>
+    <img src="/img/logo.png" alt="Inshare logo" class="logo">
+
+    <section class="download">
+        <img class="download__icon" src="/img/download-sd.svg" alt="inshare-download">
+        <% if(locals.error){ %>
+        <h4><%= locals.error %> </h4>
+        <% } else { %>
+        <h2>Your download link is ready</h2>
+        <div class="send-btn-container" >
+            <a href="<%= file %>" id="uuid">Click Here</a>
+        </div>
+        <% } %>
+        <h4>OR</h4>
+        <p>Send via gmail</p>
+
+        <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alert"></div>
+
+        <form >
+          <div class="from-group">
+            <label for="email">From:</label>
+            <input type="email" class="form-control" name="from" id="from">
+          </div>
+          <br>
+          <div class="from-group">
+            <label for="email">To:</label>
+            <input type="email" class="form-control" name="to" id="to">
+          </div>
+          <br>
+          <div class="from-group">
+            
+            <button type="submit" class="btn btn-primary" id="sendMail">Send</button>
+          </div>
+        </form>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/js/app.js"></script>
+
+</body>
+
+</html>
