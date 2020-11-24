@@ -49,7 +49,7 @@ router.post('/',(req,res)=>{
         
       const response=await file.save();
       return res.render('send',{
-        file:`${process.env.APP_BASE_URL}/files/${response.uuid}`
+        file:`${process.env.APP_BASE_URL}files/${response.uuid}`
       });
 
       })
