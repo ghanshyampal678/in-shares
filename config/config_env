@@ -6,3 +6,4 @@ MAIL_PASS=baVKdMUGO24HIQ0k
 
 
 
+ALLOWED_CLIENTS=http://localhost:3000,http://localhost:5000

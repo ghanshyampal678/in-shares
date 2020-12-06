@@ -10,6 +10,10 @@ async function sendmail({from,to,subject,text,html}){
               pass:process.env.MAIL_PASS
         }
       });
+    
+
+
+
 
       let info=await transport.sendMail({
             from:`inshare <${from}>`,
